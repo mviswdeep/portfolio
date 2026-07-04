@@ -60,15 +60,7 @@ export default function Experience() {
                   <span className="flex items-center gap-1"><FiBriefcase size={13} /> {exp.period}</span>
                   <span className="flex items-center gap-1"><FiMapPin size={13} /> {exp.location}</span>
                 </div>
-                {exp.highlights && exp.highlights.length > 0 && (
-                  <div className="space-y-3 mt-4">
-                    {exp.highlights.map((h, j) => (
-                      <p key={j} className="text-sm text-text-secondary leading-relaxed">
-                        {h}
-                      </p>
-                    ))}
-                  </div>
-                )}
+
               </motion.div>
             </motion.div>
           ))}
