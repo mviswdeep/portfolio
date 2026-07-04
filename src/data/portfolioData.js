@@ -15,7 +15,7 @@ const portfolioData = {
       "Data Engineer",
     ],
     summary:
-      "Data analyst experienced in building KPI dashboards, automated reporting pipelines, and forecasting models that turn fragmented operational and financial data into decisions stakeholders trust. Skilled at consolidating multi-source data, validating accuracy, and partnering with engineering and leadership to scale analytics infrastructure.",
+      "Data professional with hands-on experience across the full analytics lifecycle, from building ETL pipelines and designing data models to creating interactive dashboards and delivering insights that drive business decisions. I've worked with cross-functional teams to automate reporting workflows, validate data quality at scale, and translate complex datasets into clear, actionable narratives for stakeholders. With a Master's in Applied Machine Intelligence and a strong foundation in SQL, Python, and modern BI tools, I'm looking to bring that same analytical rigor and engineering mindset to my next data analyst or data engineering role.",
   },
 
   heroMetrics: [
@@ -27,19 +27,23 @@ const portfolioData = {
 
   skills: [
     {
-      category: "Data Analytics & Reporting",
-      icon: "chart",
+      category: "Data Infrastructure & Engineering",
+      icon: "pipeline",
       items: [
-        "KPI Dashboards",
-        "Trend Analysis",
-        "Cohort Analysis",
-        "Automated Reporting",
-        "Data Validation",
-        "Variance Analysis",
+        "PostgreSQL",
+        "Snowflake",
+        "AWS",
+        "Azure",
+        "REST API Ingestion",
+        "ETL/ELT Workflows",
+        "dbt",
+        "Airflow",
+        "Docker",
+        "Git",
       ],
     },
     {
-      category: "Querying & Languages",
+      category: "Querying & Programming",
       icon: "code",
       items: [
         "SQL",
@@ -53,6 +57,18 @@ const portfolioData = {
       ],
     },
     {
+      category: "Data Analytics & Reporting",
+      icon: "chart",
+      items: [
+        "KPI Dashboards",
+        "Trend Analysis",
+        "Cohort Analysis",
+        "Automated Reporting",
+        "Data Validation",
+        "Variance Analysis",
+      ],
+    },
+    {
       category: "Visualization & BI Tools",
       icon: "chart",
       items: [
@@ -63,36 +79,22 @@ const portfolioData = {
         "Streamlit",
       ],
     },
+
     {
-      category: "Forecasting & Modeling",
-      icon: "chart",
+      category: "Data Modeling & Quality",
+      icon: "database",
       items: [
-        "Revenue Forecasting",
-        "Volume Forecasting",
-        "Financial Modeling",
-        "Performance Metrics",
-        "Retention Metrics",
-      ],
-    },
-    {
-      category: "Data Infrastructure",
-      icon: "pipeline",
-      items: [
-        "PostgreSQL",
-        "Snowflake",
-        "AWS",
-        "Azure",
-        "REST API Ingestion",
-        "ETL/ELT Workflows",
-        "dbt",
-        "Airflow",
+        "Data Modeling",
+        "Star Schema",
+        "Data Quality Testing",
+        "CI/CD",
       ],
     },
     {
       category: "Collaboration",
       icon: "tools",
       items: [
-        "Cross-functional Partnership",
+        "Cross functional Partnership",
         "Engineering & Product Teams",
         "Stakeholder Reporting",
         "Technical Documentation",

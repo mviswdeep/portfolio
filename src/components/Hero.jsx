@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiArrowDown, FiMail, FiDownload } from "react-icons/fi";
+import { FiArrowDown, FiMail, FiLinkedin } from "react-icons/fi";
 import portfolioData from "../data/portfolioData";
 
 const container = {
@@ -101,13 +101,14 @@ export default function Hero() {
               View My Work <FiArrowDown />
             </motion.button>
             <motion.a
-              href="/Vishwadeepsinh_Makwana_Resume.pdf"
-              download="Vishwadeepsinh_Makwana_Resume.pdf"
+              href={portfolioData.personal.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded-full bg-bg-card border border-border text-text-primary hover:border-accent hover:text-accent hover:shadow-[0_0_30px_var(--color-accent-glow)] transition-all duration-300 cursor-pointer"
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <FiDownload /> Download Resume
+              <FiLinkedin /> LinkedIn
             </motion.a>
             <motion.button
               className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded-full border-[1.5px] border-border text-text-primary hover:border-accent hover:text-accent transition-all duration-300 cursor-pointer"

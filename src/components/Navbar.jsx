@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import { FiSun, FiMoon, FiDownload } from "react-icons/fi";
+import { FiSun, FiMoon, FiLinkedin } from "react-icons/fi";
 import { useTheme } from "../context/ThemeContext";
+import portfolioData from "../data/portfolioData";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -90,13 +91,14 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <motion.a
-            href="/Vishwadeepsinh_Makwana_Resume.pdf"
-            download="Vishwadeepsinh_Makwana_Resume.pdf"
+            href={portfolioData.personal.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-full border border-accent text-accent bg-accent-soft hover:bg-accent hover:text-white transition-all duration-300 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <FiDownload size={13} /> Resume
+            <FiLinkedin size={13} /> LinkedIn
           </motion.a>
 
           <motion.button
@@ -157,14 +159,15 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="/Vishwadeepsinh_Makwana_Resume.pdf"
-              download="Vishwadeepsinh_Makwana_Resume.pdf"
+              href={portfolioData.personal.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-3 text-[0.95rem] font-semibold rounded-xl text-accent bg-accent-soft hover:bg-accent hover:text-white transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer mt-1"
               initial={{ opacity: 0, x: -15 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: navLinks.length * 0.04, type: "spring", stiffness: 150, damping: 18 }}
             >
-              <FiDownload size={15} /> Download Resume
+              <FiLinkedin size={15} /> LinkedIn
             </motion.a>
           </motion.div>
         )}
