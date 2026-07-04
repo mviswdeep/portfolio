@@ -43,14 +43,16 @@ export default function Projects() {
               </div>
 
               {/* Metrics */}
-              <div className="flex gap-6 mb-5 py-4 border-t border-b border-border">
-                {project.metrics.map((m, j) => (
-                  <div key={j} className="flex flex-col items-center flex-1">
-                    <span className="font-[Outfit] text-xl font-extrabold gradient-text">{m.value}</span>
-                    <span className="text-[0.7rem] text-text-muted uppercase tracking-wide mt-0.5">{m.label}</span>
-                  </div>
-                ))}
-              </div>
+              {project.metrics && project.metrics.length > 0 && (
+                <div className="flex gap-6 mb-5 py-4 border-t border-b border-border">
+                  {project.metrics.map((m, j) => (
+                    <div key={j} className="flex flex-col items-center flex-1">
+                      <span className="font-[Outfit] text-xl font-extrabold gradient-text">{m.value}</span>
+                      <span className="text-[0.7rem] text-text-muted uppercase tracking-wide mt-0.5">{m.label}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Tech */}
               <div className="flex flex-wrap gap-1.5 mt-auto">

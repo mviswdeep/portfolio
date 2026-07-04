@@ -158,7 +158,6 @@ const portfolioData = {
       period: "Jan 2026 – Present",
       metrics: [
         { label: "Providers", value: "5" },
-        { label: "Metrics", value: "VaR/Sharpe" },
       ],
     },
     {
