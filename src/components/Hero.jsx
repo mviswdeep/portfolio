@@ -26,6 +26,7 @@ const scaleIn = {
 
 export default function Hero() {
   const { name, roles, location } = portfolioData.personal;
+  const { heroMetrics } = portfolioData;
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [typing, setTyping] = useState(true);
@@ -110,12 +111,7 @@ export default function Hero() {
           className="flex gap-10 justify-center mt-16 py-7 px-10 bg-bg-card border border-border rounded-2xl flex-wrap md:flex-nowrap"
           variants={scaleIn} initial="hidden" animate="visible" transition={{ delay: 1 }}
         >
-          {[
-            { value: "2+", label: "Years Experience" },
-            { value: "9M+", label: "Records Analyzed" },
-            { value: "38%", label: "Query Optimization" },
-            { value: "3.93", label: "GPA" },
-          ].map((m, i) => (
+          {heroMetrics.map((m, i) => (
             <motion.div className="flex flex-col items-center flex-1 min-w-[calc(50%-10px)] md:min-w-0" key={i}
               initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2 + i * 0.12, type: "spring", stiffness: 80, damping: 15 }}
