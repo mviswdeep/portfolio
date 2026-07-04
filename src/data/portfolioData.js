@@ -108,26 +108,25 @@ const portfolioData = {
       location: "Boston, MA",
       period: "Jan 2025 – Jul 2025",
       type: "Internship",
-      highlights: [
-        "Built unified KPI dashboards consolidating data from five previously siloed operational sources, giving four leadership teams a single, reliable source of truth for tracking daily performance against defined growth targets.",
-        "Identified three teams duplicating five-plus hours weekly of manual reporting, presented findings directly to leadership, and automated the entire workflow end to end, eliminating redundant report preparation across the organization.",
-        "Implemented automated validation checks and anomaly flags across all reporting datasets to catch source inconsistencies before they reached stakeholder dashboards, maintaining zero data errors over a continuous three-month review period.",
-        "Introduced a structured requirements intake to replace ambiguous one-off requests from three teams, translating needs into documented KPI definitions that cut dashboard revision cycles from four rounds to two."
-      ],
+      highlights: [],
     },
     {
       id: 2,
       title: "Data Analyst",
       company: "Bajrang Engineering",
       location: "Ahmedabad, India",
-      period: "Feb 2021 – Jul 2023",
+      period: "Sep 2021 – Jul 2023",
       type: "Full-time",
-      highlights: [
-        "Analyzed transportation and parts movement data to identify demand patterns and inform supply planning decisions, ensuring machine components were efficiently allocated to meet the requirements of each operational work order.",
-        "Maintained and updated machine parts inventory records across multiple product lines, ensuring data accuracy and enabling procurement and operations teams to make reliable planning decisions based on current stock status.",
-        "Identified inefficiencies in inventory tracking and parts allocation workflows, standardized the underlying data management process, and improved overall inventory accuracy for the engineering operations team and its procurement partners.",
-        "Coordinated parts fulfillment by matching incoming work order requirements to available inventory, ensuring technicians received the correct components on time and maintaining accurate records of all parts movement and usage."
-      ],
+      highlights: [],
+    },
+    {
+      id: 3,
+      title: "Data Analyst Intern",
+      company: "Bajrang Engineering",
+      location: "Ahmedabad, India",
+      period: "Feb 2021 – Aug 2021",
+      type: "Internship",
+      highlights: [],
     },
   ],
 
