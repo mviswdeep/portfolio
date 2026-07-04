@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiArrowDown, FiMail } from "react-icons/fi";
+import { FiArrowDown, FiMail, FiDownload } from "react-icons/fi";
 import portfolioData from "../data/portfolioData";
 
 const container = {
@@ -41,7 +41,12 @@ export default function Hero() {
     } else {
       if (displayed.length > 0)
         timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 40);
-      else { setRoleIndex((p) => (p + 1) % roles.length); setTyping(true); }
+      else {
+        timeout = setTimeout(() => {
+          setRoleIndex((p) => (p + 1) % roles.length);
+          setTyping(true);
+        }, 100);
+      }
     }
     return () => clearTimeout(timeout);
   }, [displayed, typing, roleIndex, roles]);
@@ -88,15 +93,24 @@ export default function Hero() {
 
           <motion.div className="flex gap-4 justify-center flex-wrap" variants={fadeUp}>
             <motion.button
-              className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded-full bg-accent text-white shadow-[0_0_30px_var(--color-accent-glow)] hover:bg-accent-light transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded-full bg-accent text-white shadow-[0_0_30px_var(--color-accent-glow)] hover:bg-accent-light transition-colors duration-300 cursor-pointer"
               onClick={() => scrollTo("#projects")}
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               View My Work <FiArrowDown />
             </motion.button>
+            <motion.a
+              href="/Vishwadeepsinh_Makwana_Resume.pdf"
+              download="Vishwadeepsinh_Makwana_Resume.pdf"
+              className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded-full bg-bg-card border border-border text-text-primary hover:border-accent hover:text-accent hover:shadow-[0_0_30px_var(--color-accent-glow)] transition-all duration-300 cursor-pointer"
+              whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <FiDownload /> Download Resume
+            </motion.a>
             <motion.button
-              className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded-full border-[1.5px] border-border-hover text-text-primary hover:border-accent hover:text-accent transition-all duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3 text-sm font-semibold rounded-full border-[1.5px] border-border text-text-primary hover:border-accent hover:text-accent transition-all duration-300 cursor-pointer"
               onClick={() => scrollTo("#contact")}
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}

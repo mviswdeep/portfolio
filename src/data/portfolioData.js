@@ -108,7 +108,12 @@ const portfolioData = {
       location: "Boston, MA",
       period: "Jan 2025 – Jul 2025",
       type: "Internship",
-      highlights: [],
+      highlights: [
+        "Built unified KPI dashboards consolidating data from five previously siloed operational sources, giving four leadership teams a single, reliable source of truth for tracking daily performance against defined growth targets.",
+        "Identified three teams duplicating five-plus hours weekly of manual reporting, presented findings directly to leadership, and automated the entire workflow end to end, eliminating redundant report preparation across the organization.",
+        "Implemented automated validation checks and anomaly flags across all reporting datasets to catch source inconsistencies before they reached stakeholder dashboards, maintaining zero data errors over a continuous three-month review period.",
+        "Introduced a structured requirements intake to replace ambiguous one-off requests from three teams, translating needs into documented KPI definitions that cut dashboard revision cycles from four rounds to two."
+      ],
     },
     {
       id: 2,
@@ -117,7 +122,12 @@ const portfolioData = {
       location: "Ahmedabad, India",
       period: "Feb 2021 – Jul 2023",
       type: "Full-time",
-      highlights: [],
+      highlights: [
+        "Analyzed transportation and parts movement data to identify demand patterns and inform supply planning decisions, ensuring machine components were efficiently allocated to meet the requirements of each operational work order.",
+        "Maintained and updated machine parts inventory records across multiple product lines, ensuring data accuracy and enabling procurement and operations teams to make reliable planning decisions based on current stock status.",
+        "Identified inefficiencies in inventory tracking and parts allocation workflows, standardized the underlying data management process, and improved overall inventory accuracy for the engineering operations team and its procurement partners.",
+        "Coordinated parts fulfillment by matching incoming work order requirements to available inventory, ensuring technicians received the correct components on time and maintaining accurate records of all parts movement and usage."
+      ],
     },
   ],
 
@@ -126,9 +136,9 @@ const portfolioData = {
       id: 1,
       title: "SEC EDGAR Financial Analytics Pipeline",
       description:
-        "Built an extraction and validation pipeline normalizing deeply nested, inconsistent SEC corporate financial filing records into six structured relational tables across 2K+ companies, enabling automated revenue and EPS trend analysis.",
+        "SEC filings arrive as deeply nested, inconsistent records; built an extraction and validation pipeline normalizing data into six structured tables across 2K+ companies, enabling revenue and EPS trend analysis.",
       impact:
-        "Identified data quality issues across company filings, developed automated validation checks, and documented data structures and calculation logic, ensuring every figure used in downstream forecasting was fully traceable and accurate.",
+        "Identified data quality issues across company filings, developed automated validation checks and documented data structures and calculation logic, ensuring every figure used in downstream forecasting was fully traceable and accurate.",
       tech: ["Python", "SQL", "PostgreSQL", "Excel"],
       period: "Jan 2026 – Present",
       metrics: [
@@ -140,9 +150,9 @@ const portfolioData = {
       id: 2,
       title: "Investment Portfolio Analytics Platform",
       description:
-        "Engineered an analytics platform ingesting market data from 5 providers on a daily automated schedule, computing performance KPIs including VaR, Maximum Drawdown, and Sharpe/Sortino ratios.",
+        "Engineered an analytics platform ingesting market data from 5 providers on a daily automated schedule, computing performance KPIs including VaR, Maximum Drawdown, and Sharpe/Sortino ratios for ongoing trend monitoring.",
       impact:
-        "Built an interactive dashboard delivering automated daily performance analytics with self-service drill-down, replacing manual periodic rebuilds and giving stakeholders always-current investment metrics.",
+        "Built an interactive dashboard delivering automated daily performance analytics with self-service drill-down, replacing manual periodic rebuilds and giving stakeholders always-current investment metrics without waiting on manual report cycles each week.",
       tech: ["Python", "SQL", "Streamlit"],
       period: "Jan 2026 – Present",
       metrics: [
@@ -154,9 +164,9 @@ const portfolioData = {
       id: 3,
       title: "CMS Open Payments Financial Data Pipeline",
       description:
-        "Built an ingestion and validation pipeline processing 500K+ raw public healthcare payment records into a clean, reporting-ready dataset for stakeholder review and ongoing oversight.",
+        "Raw healthcare payment records lacked structure for trend tracking; built an ingestion and validation pipeline processing 500K+ records into a clean, reporting-ready dataset for stakeholder review and ongoing oversight.",
       impact:
-        "Surfaced that 22% of payments concentrated among 5% of providers, documented in a stakeholder report with a reusable monitoring template for future reporting cycles.",
+        "Analysis surfaced that 22% of payments concentrated among 5% of providers, a cohort-level pattern documented in a stakeholder report with a reusable monitoring template for future reporting cycles across the program.",
       tech: ["Python", "SQL", "Excel", "Power BI"],
       period: "Oct 2024 – Jan 2025",
       metrics: [
@@ -168,9 +178,9 @@ const portfolioData = {
       id: 4,
       title: "Medicare Claims Analytics Pipeline",
       description:
-        "Built an automated, orchestrated pipeline transforming raw CMS Medicare Part D claims data spanning 50+ provider specialties with no standardized structure into audit-logged, analysis-ready tables.",
+        "CMS Medicare Part D claims data spans 50+ provider specialties with no standardized structure; built an automated, orchestrated pipeline transforming raw claims into audit-logged, analysis-ready tables for downstream review.",
       impact:
-        "Designed HIPAA-aligned data handling and validation checks throughout the pipeline, ensuring traceable transformations across every stage and giving downstream analysts a reliable, fully documented source.",
+        "Designed HIPAA-aligned data handling and validation checks throughout the pipeline, ensuring traceable transformations across every stage and giving downstream analysts a reliable, fully documented source for ongoing reporting needs.",
       tech: ["Python", "dbt", "Snowflake", "Airflow"],
       period: "Feb 2025 – Apr 2025",
       metrics: [
@@ -209,6 +219,12 @@ const portfolioData = {
       status: "In Progress",
     },
   ],
+
+  emailJS: {
+    serviceId: "YOUR_SERVICE_ID",
+    templateId: "YOUR_TEMPLATE_ID",
+    publicKey: "YOUR_PUBLIC_KEY",
+  },
 };
 
 export default portfolioData;

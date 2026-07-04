@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import { FiSun, FiMoon } from "react-icons/fi";
+import { FiSun, FiMoon, FiDownload } from "react-icons/fi";
 import { useTheme } from "../context/ThemeContext";
 
 const navLinks = [
@@ -89,8 +89,18 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <motion.a
+            href="/Vishwadeepsinh_Makwana_Resume.pdf"
+            download="Vishwadeepsinh_Makwana_Resume.pdf"
+            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-full border border-accent text-accent bg-accent-soft hover:bg-accent hover:text-white transition-all duration-300 cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FiDownload size={13} /> Resume
+          </motion.a>
+
           <motion.button
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-bg-card text-text-primary border border-border transition-all duration-300 hover:border-accent hover:text-accent"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-bg-card text-text-primary border border-border transition-all duration-300 hover:border-accent hover:text-accent cursor-pointer"
             onClick={toggleTheme}
             aria-label="Toggle theme"
             whileHover={{ scale: 1.1, rotate: 15 }}
@@ -112,7 +122,7 @@ export default function Navbar() {
           </motion.button>
 
           <motion.button
-            className="flex md:hidden w-10 h-10 items-center justify-center rounded-full bg-bg-card text-text-primary border border-border"
+            className="flex md:hidden w-10 h-10 items-center justify-center rounded-full bg-bg-card text-text-primary border border-border cursor-pointer"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
             whileTap={{ scale: 0.9 }}
@@ -146,6 +156,16 @@ export default function Navbar() {
                 {label}
               </motion.a>
             ))}
+            <motion.a
+              href="/Vishwadeepsinh_Makwana_Resume.pdf"
+              download="Vishwadeepsinh_Makwana_Resume.pdf"
+              className="px-5 py-3 text-[0.95rem] font-semibold rounded-xl text-accent bg-accent-soft hover:bg-accent hover:text-white transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer mt-1"
+              initial={{ opacity: 0, x: -15 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: navLinks.length * 0.04, type: "spring", stiffness: 150, damping: 18 }}
+            >
+              <FiDownload size={15} /> Download Resume
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
